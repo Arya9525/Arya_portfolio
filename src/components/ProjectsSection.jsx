@@ -25,7 +25,7 @@ const projects = [
     description: "Developed an app that creates AI images from text prompts using OpenAI’s DALL·E API. Added features like image preview, search, download, and sharing posts publicly.",
     image: "/projects/project3.png",
     tags: ["React", "TalwindCSS", "JavaScript"],
-    demoUrl: "#",
+    // demoUrl: "",
     githubUrl: "https://github.com/Arya9525/GemAi.git",
   },
 ];

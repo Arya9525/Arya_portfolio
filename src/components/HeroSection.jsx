@@ -27,28 +27,26 @@ export const HeroSection = () => {
           <div className="text-center lg:text-left mt-14">
             <div className="space-y-6">
               {/* Heading */}
-              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+              <h1 className="text-5x3 md:text-6xl font-semibold tracking-tight leading-tight">
                 <span className="opacity-0 animate-fade-in"></span>
                 <span className="text-primary opacity-0 animate-fade-in-delay-1">
-                  {" "}
                 </span>
-                <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
-                  {" "}
+                <span className="text-gradient opacity-0 animate-fade-in-delay-2">
               Arya Kumar Mishra
                 </span>
               </h1>
 
               {/* Subtitle */}
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 opacity-0 animate-fade-in-delay-3 text-justify">
-                Passionate and dedicated{" "}
+                A Passionate and dedicated{" "}
                 <span className="font-semibold text-primary">
-                  Full Stack Web Developer &nbsp;
+                  Full Stack Web Developer{" "}
                 </span>
-                and current{" "}
+                and a current{" "}
                 <span className="font-semibold">
                   MCA student at SRM Institute of Science and Technology
                 </span>
-                , with a strong academic foundation {" "}
+                , with a strong and solid academic foundation {" "}
                 . Enthusiastic about building efficient and user-friendly
                 applications, with strong problem-solving abilities and a keen
                 interest in emerging technologies. Eager to contribute to impactful

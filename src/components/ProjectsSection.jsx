@@ -34,12 +34,12 @@ export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-9 text-center">
           {" "}
           <span className="text-primary"> Projects </span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
             <div
               key={key}
@@ -62,7 +62,7 @@ export const ProjectsSection = () => {
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                <h3 className="text-xl font-semibold mb-1 text-left"> {project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4 text-justify">
                   {project.description}
                 </p>

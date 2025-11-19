@@ -1,37 +1,62 @@
-import { ArrowUp, Facebook, Twitter, Github, Linkedin, } from "lucide-react";
+import { 
+  ArrowUp, 
+  Facebook, 
+  Github, 
+  Linkedin, 
+  Instagram 
+} from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-r from-primary/90 to-primary/70 text-white py-10 px-6 mt-16">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        {/* Left Side - Copyright */}
-        <p className="text-sm opacity-80">
+    <footer className="relative bg-gradient-to-r from-primary/90 to-primary/70 text-white py-4 px-6 mt-16">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+
+        {/* Left - Copyright */}
+        <p className="text-xs md:text-sm opacity-80 text-center">
           © {new Date().getFullYear()} <span className="font-semibold">Arya</span>. All rights reserved.
         </p>
 
-        {/* Center - Social Links */}
-        <div className="flex gap-5">
-          <a href="https://www.facebook.com/profile.php?id=100006295218217" target="_blank" className="hover:text-gray-200 transition-transform hover:scale-110">
-            <Facebook size={20} />
-          </a>
-          {/* <a href="https://twitter.com" target="_blank" className="hover:text-gray-200 transition-transform hover:scale-110">
-            <Twitter size={20} />
-          </a> */}
-          <a href="https://github.com/Arya9525" target="_blank" className="hover:text-gray-200 transition-transform hover:scale-110">
-            <Github size={20} />
-          </a>
-          <a href="https://www.linkedin.com/in/arya-kumar-mishra-2a64421a1/" target="_blank" className="hover:text-gray-200 transition-transform hover:scale-110">
-            <Linkedin size={20} />
-          </a>
+        {/* Center - Social Icons (same line) */}
+        <div className="flex gap-3 items-center">
+          {[
+            {
+              href: "https://www.facebook.com/profile.php?id=100006295218217",
+              icon: <Facebook size={18} />
+            },
+            {
+              href: "https://www.instagram.com/_arya__mishra__/",
+              icon: <Instagram size={18} />
+            },
+            {
+              href: "https://github.com/Arya9525",
+              icon: <Github size={18} />
+            },
+            {
+              href: "https://www.linkedin.com/in/arya-kumar-mishra-2a64421a1/",
+              icon: <Linkedin size={18} />
+            }
+          ].map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              target="_blank"
+              className="p-2 bg-white/15 rounded-full backdrop-blur-sm hover:bg-white/25 
+              transition-all hover:scale-105"
+            >
+              {item.icon}
+            </a>
+          ))}
         </div>
 
-        {/* Right Side - Scroll To Top */}
+        {/* Right - Scroll to Top */}
         <a
           href="#hero"
-          className="p-3 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md transition-transform hover:scale-110 shadow-lg"
+          className="p-2.5 rounded-full bg-white/20 hover:bg-white/30 
+          backdrop-blur-md transition-transform hover:scale-110 shadow-md"
         >
-          <ArrowUp size={20} />
+          <ArrowUp size={18} />
         </a>
+
       </div>
     </footer>
   );

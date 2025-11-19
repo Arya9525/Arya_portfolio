@@ -26,9 +26,9 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300",
+        "fixed left-[0px] right-[40px] z-40 transition-all duration-300",
         isScrolled
-          ? "py-3 bg-background/40 backdrop-blur-xl border-b border-white/10 shadow-lg"
+          ? "py-5 bg-background/40 backdrop-blur-xl border-b border-white/10 shadow-lg"
           : "py-5 bg-transparent"
       )}
     >
@@ -65,9 +65,9 @@ export const Navbar = () => {
         {/* Mobile Button */}
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
+          className="md:hidden p-2 text-foreground z-[999]"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? <X size={26} className="shrink-0" /> : <Menu size={26} className="shrink-0" />}
         </button>
 
         {/* Mobile Menu */}

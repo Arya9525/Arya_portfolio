@@ -8,7 +8,7 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-r from-primary/90 to-primary/70 text-white py-4 px-6 mt-16">
+    <footer className="relative bg-gradient-to-r from-primary/90 to-primary/70 text-white py-4 px-6 mt-16 ">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
 
         {/* Left - Copyright */}

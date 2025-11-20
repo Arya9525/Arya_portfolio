@@ -26,20 +26,20 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed left-[0px] right-[40px] z-40 transition-all duration-300",
+        "fixed inset-x-0 z-40 transition-all duration-300",
         isScrolled
           ? "py-5 bg-background/40 backdrop-blur-xl border-b border-white/10 shadow-lg"
           : "py-5 bg-transparent"
       )}
     >
-      <div className="container flex items-center justify-between">
+      <div className="container mx-auto max-w-6xl flex items-center justify-between px-4">
 
         {/* LOGO */}
         <a
           className="text-xl font-bold text-primary flex items-center cursor-pointer"
           href="#hero"
         >
-          <span className="relative z-10 group">
+          <span className="px-8 relative z-10 group">
             <span className="text-foreground group-hover:text-primary transition-colors duration-300">
               Arya
             </span>{" "}
@@ -49,7 +49,7 @@ export const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 px-12">
           {navItems.map((item, key) => (
             <a
               key={key}

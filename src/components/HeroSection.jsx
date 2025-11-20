@@ -13,7 +13,7 @@ export const HeroSection = () => {
           {/* ===== Image Section ===== */}
           {/* On large screens, this will be the second column (order-last) */}
           <div className="flex justify-center lg:order-last">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-2 bg-gradient-to-r from-primary via-purple-500 to-secondary animate-fade-in">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-2 bg-gradient-to-r from-primary via-purple-500 to-secondary animate-fade-in mt-20">
               <img
                 src="/image3.jpeg" // This should match the image name in your /public folder
                 alt="arya"

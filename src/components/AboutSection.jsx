@@ -55,7 +55,7 @@ export const AboutSection = () => {
           </div>
 
           {/* RIGHT SIDE – INDIVIDUAL BOXES */}
-          <div className="space-y-6">
+          <div className="space-y-11">
 
             {/* Box 1 */}
             <div className="rounded-2xl border border-primary/20 p-6 shadow-md bg-background/60 backdrop-blur-md hover:shadow-lg transition-all">

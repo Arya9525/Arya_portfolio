@@ -1,88 +1,103 @@
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-
-const skills = [
-  //Programming Language
-  { name: "C", level: 50, category: "programming" },
-  { name: "Java", level: 90, category: "programming" },
-  { name: "Python", level: 60, category: "programming" },
-
-
-  // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 70, category: "frontend" },
-  { name: "React", level: 70, category: "frontend" },
-  { name: "Tailwind CSS", level: 60, category: "frontend" },
-  { name: "BootStrap", level: 60, category: "frontend" },
-
-  // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express.js", level: 75, category: "backend" },
-  { name: "EJS", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "SQL", level: 85, category: "backend" },
-
-  // Tools
-  { name: "Git/GitHub", level: 70, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
-];
-
-const categories = ["all", "programming" ,"frontend", "backend", "tools"];
+import React from "react";
 
 export const SkillsSection = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
-
-  const filteredSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory
-  );
   return (
-    <section id="skills" className="py-24 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-primary"> Skills</span>
+    <section id="skills" className="py-28 px-6 bg-secondary/40">
+      <div className="container mx-auto max-w-7xl">
+
+        <h2 className="text-4xl font-bold text-center mb-16">
+          My <span className="text-primary">Skills</span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, key) => (
-            <button
-              key={key}
-              onClick={() => setActiveCategory(category)}
-              className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
-                activeCategory === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-forefround hover:bd-secondary"
-              )}
-            >
-              {category}
-            </button>
-          ))}
+        {/* FULL WIDTH BOX */}
+        <div
+          className="
+            w-full 
+            bg-card 
+            border border-border 
+            rounded-3xl 
+      
+            overflow-hidden 
+            backdrop-blur-xl
+            transition-all 
+            duration-300 
+            hover:shadow-primary/40
+          "
+        >
+          {/* Attractive Header Bar */}
+          <div className="
+            w-full 
+            py-6 
+            px-10 
+            text-xl 
+            font-semibold 
+            bg-gradient-to-r 
+            from-primary/40 
+            to-primary/10
+            border-b 
+            border-border
+          ">
+            Technical Skills Overview
+          </div>
+
+          {/* TABLE */}
+          <table className="w-full text-left border-collapse text-lg">
+            <tbody>
+
+              {/* ROW TEMPLATE */}
+              {[
+                {
+                  title: "Programming",
+                  list: "C, C#, Java, Python",
+                },
+                {
+                  title: "Frontend",
+                  list: "HTML/CSS, JavaScript, React, Tailwind CSS, Bootstrap",
+                },
+                {
+                  title: "Backend",
+                  list: "Node.js, Express.js, EJS, MongoDB, SQL, ASP.Net",
+                },
+                {
+                  title: "Tools",
+                  list: "Git/GitHub, VS Code",
+                },
+              ].map((row, index) => (
+                <tr
+                  key={index}
+                  className="
+                    border-b border-border 
+                    transition-all 
+                    duration-200 
+                    hover:bg-secondary/50
+                  "
+                >
+                  <th
+                    className="
+                      p-8 
+                      w-1/3 
+                      text-primary 
+                      text-2xl 
+                      font-semibold 
+                      tracking-wide 
+                      border-r 
+                      border-border
+                      bg-muted/20
+                    "
+                  >
+                    {row.title}
+                  </th>
+
+                  <td className="p-8 text-foreground/90 leading-relaxed text-xl">
+                    {row.list}
+                  </td>
+                </tr>
+              ))}
+
+            </tbody>
+          </table>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredSkills.map((skill, key) => (
-            <div
-              key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
-            >
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg"> {skill.name}</h3>
-              </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: skill.level + "%" }}
-                />
-              </div>
-
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
